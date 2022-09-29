@@ -11,7 +11,7 @@
     "https"
   ],
   "paths": {
-    "/docs": {
+    "/api-docs": {
       "get": {
         "description": "",
         "parameters": [],
