@@ -23,6 +23,7 @@ const transactionsReturn = async (req, res) => {
 
 //return one transaction
 const transactionReturn = async (req, res) => {
+  validateID(req, res);
   const transactionID = new ObjectId(req.params.ID);
   const result = await mongodb
     .getDatabase()
@@ -124,6 +125,7 @@ const usersReturn = async (req, res) => {
 
 //return one user
 const userReturn = async (req, res) => {
+  validateID(req, res);
   const userID = new ObjectId(req.params.ID);
   const result = await mongodb
     .getDatabase()

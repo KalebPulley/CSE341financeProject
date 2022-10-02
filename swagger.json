@@ -8,7 +8,7 @@
   "host": "cse341financeproject.onrender.com",
   "basePath": "/",
   "schemes": [
-    "https"
+    "HTTPS"
   ],
   "paths": {
     "/api-docs": {
@@ -259,25 +259,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "user_id": {
                   "example": "any"
                 },
-                "lastName": {
+                "amount": {
                   "example": "any"
                 },
-                "userLevel": {
+                "description": {
                   "example": "any"
                 },
-                "role": {
+                "otherParty": {
                   "example": "any"
                 },
-                "department": {
-                  "example": "any"
-                },
-                "transactionCount": {
-                  "example": "any"
-                },
-                "email": {
+                "fund": {
                   "example": "any"
                 }
               }
