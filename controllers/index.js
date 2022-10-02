@@ -88,20 +88,18 @@ const transactionUpdate = async (req, res) => {
   // console.log( req.body);
   // const uriBody = JSON.parse(req.body);
   const transactionID = new ObjectId(req.params.ID);
-  const user = {
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
-    userLevel: req.body.userLevel,
-    role: req.body.role,
-    department: req.body.department,
-    transactionCount: req.body.transactionCount,
-    email: req.body.email,
+  const transaction = {
+    user_id: req.body.user_id,
+    amount: req.body.amount,
+    description: req.body.description,
+    otherParty: req.body.otherParty,
+    fund: req.body.fund,
   };
   const result = await mongodb
     .getDatabase()
     .db("financeProject")
     .collection("transactions")
-    .updateOne({ _id: transactionID }, { $set: user });
+    .updateOne({ _id: transactionID }, { $set: transaction });
   if (result.acknowledged) {
     res.status(201).json(response);
   } else {
