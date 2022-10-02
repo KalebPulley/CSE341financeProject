@@ -13,3 +13,17 @@ curl -X 'POST' \
   "email": "jack@frostMail.com"
 }'
 ###
+curl -X 'PUT' \
+  'https://cse341financeproject.onrender.com/users/6338f5b744240c76c4bafb2d' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d ' {
+    "firstName": "Jack",
+    "lastName": "Jones",
+    "userLevel": "1",
+    "role": "Normal Guy",
+    "department": "Sales",
+    "transactionCount": "0",
+    "email": "jack@jones.com"
+  }'
+  ###
