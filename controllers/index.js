@@ -79,8 +79,6 @@ const transactionDelete = async (req, res) => {
         response.error || "somthing went wrong while delteing the transaction."
       );
   }
-  // res.setHeader('Content-type', 'application/json');
-  // res.status(200).send(result);
 };
 
 //create one user
