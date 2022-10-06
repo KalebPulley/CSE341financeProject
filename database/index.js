@@ -9,28 +9,29 @@ let database;
 
 //initialize database
 const initializeDatabase = (callback) => {
-    if(database){
-        console.log("database is already running");
-        return callback(null, database);
-    }
-    MongoClient.connect(process.env.MONGODB_URI)
-        .then((client) => {
-            database = client;
-            callback(null, database);
-        }).catch((err) => {
-            callback(err);
-        });
-}
+  if (database) {
+    console.log("database is already running");
+    return callback(null, database);
+  }
+  MongoClient.connect(process.env.MONGODB_URI)
+    .then((client) => {
+      database = client;
+      callback(null, database);
+    })
+    .catch((err) => {
+      callback(err);
+    });
+};
 
 //get dataBase if it is initialized
 const getDatabase = () => {
-    if (!database){
-        throw Error('Database not initialized');
-    }
-    return database;
+  if (!database) {
+    throw Error("Database not initialized");
+  }
+  return database;
 };
 
 module.exports = {
-    initializeDatabase,
-    getDatabase
+  initializeDatabase,
+  getDatabase,
 };
