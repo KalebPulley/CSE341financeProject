@@ -7,6 +7,7 @@ const { MongoClient } = require("mongodb");
 //set varable for database
 let database;
 
+
 //initialize database
 const initializeDatabase = (callback) => {
   if (database) {
